@@ -1,0 +1,175 @@
+{
+  "project_info": {
+    "name": "AquaNexus",
+    "type": "React Native Expo",
+    "theme": "Light",
+    "archetype": "3 (Pastel & Soft) mixed with water/aquatic aesthetic",
+    "aesthetic": "Aquatic, cozy, minimal, soft gradients, glassmorphism, subtle water/ripple feel. NO cartoon fish or doodles."
+  },
+  "design_tokens": {
+    "colors": {
+      "primary": "#38B2AC",
+      "secondary": "#81E6D9",
+      "accent": "#63B3ED",
+      "background": "#F7FAFC",
+      "surface": "#FFFFFF",
+      "surface_glass": "rgba(255, 255, 255, 0.7)",
+      "text_primary": "#2D3748",
+      "text_secondary": "#718096",
+      "success": "#48BB78",
+      "error": "#F56565",
+      "border": "rgba(56, 178, 172, 0.2)",
+      "water_gradient": ["#E6FFFA", "#EBF8FF"]
+    },
+    "typography": {
+      "font_family": "System (San Francisco/Roboto)",
+      "h1": { "size": 32, "weight": "800", "color": "#2D3748" },
+      "h2": { "size": 24, "weight": "700", "color": "#2D3748" },
+      "h3": { "size": 18, "weight": "600", "color": "#2D3748" },
+      "body": { "size": 16, "weight": "400", "color": "#4A5568", "lineHeight": 24 },
+      "label": { "size": 12, "weight": "600", "textTransform": "uppercase", "color": "#718096" }
+    },
+    "spacing": {
+      "xs": 4,
+      "sm": 8,
+      "md": 16,
+      "lg": 24,
+      "xl": 32,
+      "xxl": 48
+    },
+    "borders": {
+      "radius_sm": 8,
+      "radius_md": 12,
+      "radius_lg": 20,
+      "radius_full": 9999
+    },
+    "shadows": {
+      "glass": {
+        "shadowColor": "#38B2AC",
+        "shadowOffset": { "width": 0, "height": 8 },
+        "shadowOpacity": 0.1,
+        "shadowRadius": 24,
+        "elevation": 5
+      },
+      "card": {
+        "shadowColor": "#000000",
+        "shadowOffset": { "width": 0, "height": 4 },
+        "shadowOpacity": 0.05,
+        "shadowRadius": 12,
+        "elevation": 2
+      }
+    }
+  },
+  "component_guidelines": {
+    "buttons": {
+      "primary": "Teal/Mint gradient or solid teal background, fully rounded (radius_full), white bold text, soft glass shadow.",
+      "secondary": "Glassmorphic background (rgba white), teal border, teal text.",
+      "test_ids": "MUST include data-testid='[action]-button'"
+    },
+    "cards": {
+      "dashboard_card": "White or Glass surface, radius_lg (20px), internal padding 20px, card shadow. Left-aligned content.",
+      "product_card": "Vertical stack, image top (radius_md), details bottom. Reorder button small.",
+      "test_ids": "MUST include data-testid='[name]-card'"
+    },
+    "inputs": {
+      "text_input": "React Native Paper TextInput. Outlined mode. Outline color teal-200. Background white or soft transparent. Rounded radius_md (12px).",
+      "test_ids": "MUST include data-testid='[name]-input'"
+    },
+    "navigation": {
+      "drawer": "Left collapsible. Background: Soft water gradient (mint to pale blue). Active item: Solid white with teal text. Inactive item: Dark slate text."
+    }
+  },
+  "screens": {
+    "Auth": {
+      "layout": "Centered content, soft gradient background. Logo top, glassmorphic card for form.",
+      "elements": [
+        "Sign In: Email, Password inputs. Primary CTA 'Sign In'.",
+        "Sign Up: Name, Email, Password inputs. Primary CTA 'Create Account'.",
+        "Switch link: 'Don't have an account? Sign Up'"
+      ]
+    },
+    "Main_Layout": {
+      "layout": "React Navigation Drawer. Custom DrawerContent mapping to app sections."
+    },
+    "Dashboard": {
+      "layout": "Scrollable view. Generous padding (24px). 'Hello, [User]' H1.",
+      "elements": [
+        "Temperature Card: Icon (thermometer), 24°C, subtle red/green indicator.",
+        "pH Level Card: Icon (water drop), 7.2 pH, optional wave graphic.",
+        "Food Level Card: Icon (fish), 85%, progress bar."
+      ]
+    },
+    "AI_Interface": {
+      "layout": "Chat interface. Floating header. Bottom fixed input area.",
+      "elements": [
+        "User Bubble: Pastel Blue, aligned right, radius_md but bottom-right flat.",
+        "AI Bubble: Soft Mint/White, aligned left, radius_md but bottom-left flat.",
+        "Input: 'Ask anything about your aquarium...', glassmorphic field, send icon."
+      ]
+    },
+    "Camera": {
+      "layout": "Full screen camera view (mock or real Expo Camera). Overlay UI.",
+      "elements": [
+        "Bounding Box: Teal dashed border, transparent center.",
+        "Label: 'Fish Type: Goldfish' floating near box, white text on dark glass pill.",
+        "Capture Button: Large circular, mint outer ring, white inner circle."
+      ]
+    },
+    "Products": {
+      "layout": "Grid (2 columns) or List layout. Top filter chips.",
+      "elements": [
+        "Product items: Filter, Glass, Driftwood, Fish Food, Dispensers, Sensors.",
+        "CTA: 'Reorder' button on each item."
+      ]
+    }
+  },
+  "media": {
+    "products": [
+      {
+        "id": "aquarium-filter",
+        "name": "Aquarium Filter",
+        "category": "equipment",
+        "image_url": "https://images.unsplash.com/photo-1758854486625-2ef3d73853fc?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1ODh8MHwxfHNlYXJjaHwyfHxhcXVhcml1bSUyMGZpbHRlcnxlbnwwfHx8fDE3Nzc2ODYxNTN8MA&ixlib=rb-4.1.0&q=85"
+      },
+      {
+        "id": "driftwood",
+        "name": "Natural Driftwood",
+        "category": "decor",
+        "image_url": "https://images.unsplash.com/photo-1630094129983-2c90e1fa129d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzR8MHwxfHNlYXJjaHwxfHxhcXVhcml1bSUyMGRyaWZ0d29vZHxlbnwwfHx8fDE3Nzc2ODYxNTN8MA&ixlib=rb-4.1.0&q=85"
+      },
+      {
+        "id": "fish-food",
+        "name": "Premium Fish Flakes",
+        "category": "food",
+        "image_url": "https://images.unsplash.com/photo-1615141982883-c7ad0e69fd62?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMjd8MHwxfHNlYXJjaHwyfHxmaXNoJTIwZm9vZHxlbnwwfHx8fDE3Nzc2ODYxNTN8MA&ixlib=rb-4.1.0&q=85"
+      },
+      {
+        "id": "temp-sensor",
+        "name": "Smart Temp Sensor",
+        "category": "equipment",
+        "image_url": "https://images.unsplash.com/photo-1583924920073-98b3ac159c09?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODl8MHwxfHNlYXJjaHwxfHx3YXRlciUyMHNlbnNvcnxlbnwwfHx8fDE3Nzc2ODYxNTN8MA&ixlib=rb-4.1.0&q=85"
+      },
+      {
+        "id": "ph-sensor",
+        "name": "Digital pH Meter",
+        "category": "equipment",
+        "image_url": "https://images.unsplash.com/photo-1662647343354-5a03bbbd1d45?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODl8MHwxfHNlYXJjaHwzfHx3YXRlciUyMHNlbnNvcnxlbnwwfHx8fDE3Nzc2ODYxNTN8MA&ixlib=rb-4.1.0&q=85"
+      },
+      {
+        "id": "auto-dispenser",
+        "name": "Auto Food Dispenser",
+        "category": "equipment",
+        "image_url": "https://images.unsplash.com/photo-1708191281407-7176d42c3107?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1ODh8MHwxfHNlYXJjaHwzfHxhcXVhcml1bSUyMGZpbHRlcnxlbnwwfHx8fDE3Nzc2ODYxNTN8MA&ixlib=rb-4.1.0&q=85"
+      }
+    ]
+  },
+  "instructions_to_main_agent": [
+    "Use React Native Expo with TypeScript.",
+    "Implement React Navigation Drawer for the Main Layout.",
+    "Use React Native Paper for core components but heavily style them using the tokens above to achieve the 'glassmorphic' and 'soft pastel' look.",
+    "All interactive elements must have a data-testid attribute in kebab-case (e.g. data-testid='login-button').",
+    "Do not use cartoon fish or doodles. Stick to minimal, aquatic gradients and clean UI. Emphasize organic/water archetypes.",
+    "Mock Auth state and data using Zustand.",
+    "Use the provided image_urls for the product list mock data. Do not use placeholder images like via.placeholder.com."
+  ]
+}
